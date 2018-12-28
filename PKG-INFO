@@ -1,0 +1,26 @@
+Metadata-Version: 1.0
+Name: PyLogo
+Version: 0.4
+Summary: Logo interpreter
+Home-page: http://pylogo.org
+Author: Ian Bicking
+Author-email: ianb@colorstudy.com
+License: MIT
+Description: An interpreter for the Logo educational programming language.
+        
+        This version of Logo is a faithful representation of the language,
+        written in a way that makes it compatible with Python code.
+        Primitives are written in Python, and Python can call Logo code
+        similar to how it calls Python code.
+        
+        There is a `Subversion repository
+        <http://svn.colorstudy.com/PyLogo/trunk#egg=PyLogo-dev>`_.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Beta
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Logo
+Classifier: Programming Language :: Python
+Classifier: Topic :: Education
+Classifier: Topic :: Software Development :: Interpreters
