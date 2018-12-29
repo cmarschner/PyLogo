@@ -3,7 +3,7 @@ from future import standard_library
 standard_library.install_aliases()
 from builtins import map
 from past.builtins import basestring
-from .builtins import object
+#from .builtins import object
 import types
 from io import StringIO
 from .builtins import _join, logo_soft_repr

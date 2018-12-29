@@ -47,7 +47,11 @@ def doit(args):
         if options.quit_after:
             return
         if options.console:
+            print("Starting input loop")
             Logo.input_loop(sys.stdin, sys.stdout)
         else:
             from pylogo import ide
             ide.main()
+
+if __name__ == '__main__':
+   main()

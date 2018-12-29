@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-from .builtins import object
+#from .builtins import object
 class NoDefault(object): pass
 
 def getlogoattr(obj, attr, default=NoDefault):

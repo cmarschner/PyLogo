@@ -29,13 +29,14 @@ from __future__ import generators
 from future import standard_library
 standard_library.install_aliases()
 from builtins import input
-from .builtins import object
+#from .builtins import object
 
 import re
 import sys
 from pylogo.common import *
 # Just importing this enables readline when doing raw_input:
 import readline
+from io import IOBase
 
 word_matcher = r'[a-zA-Z\._\?!][a-zA-Z0-9\._\?!]*'
 word_re = re.compile(word_matcher)
@@ -53,7 +54,7 @@ class FileTokenizer(object):
     """
 
     def __init__(self, f, output=None, prompt=None):
-        if type(f) is file:
+        if isinstance(f, IOBase):
             f = TrackingStream(f)
         self.file = f
         self.generator = self._generator()

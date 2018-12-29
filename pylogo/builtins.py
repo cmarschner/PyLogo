@@ -26,7 +26,7 @@ from builtins import map
 from builtins import range
 from past.builtins import basestring
 from past.utils import old_div
-from .builtins import object
+#from .builtins import object
 import os, random, sys
 import operator, math, time
 import threading
@@ -34,7 +34,7 @@ try:
     from io import StringIO
 except ImportError:
     from io import StringIO
-from sets import Set
+#from sets import Set
 
 from pylogo.common import *
 from pylogo import reader

@@ -12,7 +12,7 @@ from builtins import zip
 from builtins import str
 from builtins import range
 from past.builtins import basestring
-from .builtins import object
+#from .builtins import object
 from types import *
 from pylogo import reader
 import inspect, os, sys
@@ -530,7 +530,7 @@ class Interpreter(object):
         `logo_name` overrides the function name, and `aliases` provides
         abbreviations for the function (like FD for FORWARD).
         """
-        if isinstance(import_function, (ClassType, type)):
+        if isinstance(import_function, type):
             func = import_function.__init__
             name = import_function.__name__
         else:
@@ -587,7 +587,7 @@ class Interpreter(object):
                     self.import_function(obj, names)
                 else:
                     self.import_function(obj)
-            if (type(obj) in (ClassType, type)
+            if (type(obj) is type
                 and getattr(obj, 'logo_class', False)):
                 self.import_function(obj, [obj.__name__])
         if main_func:
@@ -762,7 +762,7 @@ def arity(func):
     Since `logo_aware` functions take an interpreter as the first
     argument, the arity of these functions is reduced by one.
     """
-    if isinstance(func, (ClassType, type)):
+    if isinstance(func, type):
         func = func.__init__
     if func is object.__init__:
         # Weird special case

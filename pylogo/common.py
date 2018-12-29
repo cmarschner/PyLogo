@@ -1,7 +1,7 @@
 from __future__ import absolute_import
 from builtins import map
 from builtins import str
-from .builtins import object
+#from .builtins import object
 class LogoError(Exception):
 
     """
@@ -20,7 +20,7 @@ class LogoError(Exception):
         self.kw = kw
         if tokenizer is not None:
             self.set_tokenizer(tokenizer)
-        self.msg = ' '.join(args)
+        self.msg = ' '.join([str(x) for x in args])
         self.frame = None
         if 'description' in kw:
             self.description = kw['description']
